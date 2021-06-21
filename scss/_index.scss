@@ -1,0 +1,277 @@
+@import 'animations';
+@import 'basics';
+
+// ###########################
+// ###### landing page ######
+// #########################
+main#main-index {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, calc(82vh/12));
+  padding: 0 3vmax;
+
+  h1 {
+    @include header1;
+    grid-column: 2 / 13;
+    grid-row: 1 / 6;
+    align-self: center;
+    margin-top: 1vmax;
+
+    span {
+      color: $dark-mint;
+    }
+  }
+
+  p {
+    @include basic-text;
+    grid-column: 6 / 13;
+    grid-row: 6 / 9;
+    justify-self: center;
+    align-self: center;
+    width: clamp(26ch, 100%, 56ch)
+  }
+
+  .img-wrapper {
+    grid-column: 1 / 5;
+    grid-row: 3 / 13;
+
+    #home-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  a {
+    @include button;
+    grid-column: 6 / 13;
+    grid-row: 10 / 10;
+    justify-self: center;
+  }
+
+  .line-accent {
+    border-left: 1px solid $dark-mint;
+    grid-column: 9 / 10;
+    grid-row: 9 / 13;
+    margin-left: 3.5vmax;
+  }
+}
+// ###########################
+// ###### Project reel ######
+// #########################
+#projectReel {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, calc(82vh/12));
+  padding: 0 3vmax;
+  .projectFilter {
+    grid-row: 3 / 3;
+  }
+  .projectTitle {
+    grid-row: 4 / 6;
+  }
+  .projectDescription {
+    grid-row: 6 / 9;
+  }
+  .projectLink {
+    grid-row: 9 / 10;
+  }
+  .img-wrapper {
+    grid-row: 3 / 13;
+  }
+  .project-reel-btn {
+    display: grid;
+    grid-row: 12 / 13;
+    align-self: flex-end;
+    background-color: $dark-mint;
+    height: calc(80vh/12);
+    width: calc(80vh/12);
+    place-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1;
+    img {
+      height: 50%;
+      width: 50%;
+    }
+    &:hover {
+      background-color: $steel-blue;
+      transition: .2s;
+    }
+  }
+  #projectReelBtns {
+    grid-column: 1 / 2;
+    grid-row: 4 / 13;
+    display: flex;
+    flex-direction: column;
+    button {
+      border: none;
+      width: 50px;
+      height: 50px;
+      background: none;
+      cursor: pointer;
+      transition: .2s;
+      font-family: $fontSora;
+      font-weight: 200;
+      &.active {
+        background-color: $dark-mint;
+        color: #fff;
+      }
+      &:hover {
+        background-color: $steel-blue;
+        color: #fff;
+        transition: .2s;
+      }
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+}
+
+// #######################
+// ###### About me ######
+// #####################
+.about {
+  padding: 4vmax 3vmax 0;
+}
+h2 {
+  @include header2;
+  text-align: center;
+  margin-top: 2vmax;
+
+}
+#whatDoIDo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 2vmax;
+
+  .activity1, .activity2, .activity3, .activity4 {
+    width: 40vmax;
+    margin: 3vmax auto;
+    display: flex;
+    .activityImg {
+      margin-top: 0.4vmax;
+      width: 5vmax;
+      height: 5vmax;
+    }
+    .activity-text-wrapper {
+      padding-left: 2vmax;
+      h3 {
+        @include header3;
+      }
+      p {
+        margin-top: 1vmax;
+      }
+    }
+  }
+}
+#whoAmI {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, calc(48vh/8));
+  margin-top: 5vmax;
+
+  #traits {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1 / 13;
+    grid-row: 2 / 8;
+    margin: 0 auto;
+    place-self: center;
+    li {
+      display: flex;
+      flex-direction: row;
+      width: 30vw;
+      height: 8vh;
+      margin: 1vmax auto;
+      align-items: center;
+
+      .traitImg {
+        width: 5vmax;
+        height: 5vmax;
+      }
+      p {
+        margin-left: 2vmax;
+        align-self: center;
+      }
+    }
+  }
+}
+
+.contact {
+  margin: calc(10vh - 18px) 0;
+  padding-top: 5vh;
+
+  .mailInfo {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, calc(64vh/12));
+    padding: 5vh 3vmax 0;
+    width: 95vw;
+    min-height: auto;
+    overflow-y: hidden;
+    background-color: $white-linen;
+    h2 {
+      grid-column: 1 / 13;
+      grid-row: 1 / 1;
+      text-align: center;
+    }
+    p {
+      @include basic-text;
+      grid-column: 1 / 13;
+      grid-row: 4 / 5;
+      text-align: center;
+    }
+
+    .line-accent {
+      border-left: 1px solid $dark-mint;
+      grid-column: 6 / 8;
+      grid-row: 5 / 9;
+      justify-self: center;
+    }
+
+    .projectLink {
+      @include button;
+      grid-column: 6 / 8;
+      grid-row: 6 / 7;
+      justify-self: center;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-evenly;
+      grid-column: 3 / 11;
+      grid-row: 10 / 13;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        img {
+          display: block;
+          margin: 0 auto;
+          height: 50px;
+          width: 50px;
+        }
+
+        .social-link-name {
+          margin-top: 1vh;
+          text-decoration: none;
+          color: $dark-mint;
+          font-weight: 500;
+
+          &:hover {
+            border-bottom: 1px solid $dark-mint;
+            transition: .2s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import 'assets';
+
+@mixin shadowEffect {
+  -webkit-box-shadow: 4px 7px 20px 4px rgba(177, 168, 148, 0.1);
+  -moz-box-shadow: 4px 7px 20px 4px rgba(177, 168, 148, 0.1);
+  box-shadow: 4px 7px 20px 4px rgba(177, 168, 148, 0.1);
+}
+
+@mixin basic-text{
+  font-family: $fontMontserrat;
+  font-size: clamp(1.0rem, 1.2rem, 1.3vmax);
+  font-weight: 200;
+  color: #000;
+  line-height: 1.6;
+}
+
+@mixin header1 {
+  font-family: $fontSora;
+  font-size: 4vmax;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $steel-blue;
+  z-index: 1;
+}
+
+@mixin header2 {
+  font-family: $fontSora;
+  font-size: 3vmax;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $steel-blue;
+}
+
+@mixin header3 {
+  font-family: $fontSora;
+  font-size: 2vmax;
+  font-weight: 700;
+  line-height: 1.6;
+  color: $steel-blue;
+}
+
+@mixin button {
+  font-family: $fontSora;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $dark-mint;
+  border: 1px solid $dark-mint;
+  background-color: $white-linen;
+  width: 150px;
+  height: 48px;
+  text-align: center;
+  line-height: 1.9;
+  text-decoration: none;
+  font-variant: small-caps;
+  transition: .2s;
+  &:hover {
+    color: #fff;
+    border: 1px solid $steel-blue;
+    background-color: $steel-blue;
+    transition: .2s;
+  }
+}
+
+@mixin nav-header {
+  font-family: $fontSora;
+  font-size: 1.625rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.8;
+  font-variant: small-caps;
+}
+
+@mixin nav-navigation {
+  font-family: $fontSora;
+  font-size: 1.25rem;
+  color: #000;
+  font-weight: 300;
+  line-height: 1.6;
+  font-variant: small-caps;
+}

@@ -1,0 +1,42 @@
+@import 'mixins';
+
+.work {
+  margin: calc(10vh - 18px) 0;
+  padding-top: 5vh;
+  width: 95vw;
+
+  .project {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, calc(80vh/12));
+    margin: calc(10vh - 18px) 0 20vh;
+    padding: 0 3vmax;
+    &:nth-of-type(even){
+      background-color: $white-linen;
+
+      .projectFilter {
+        grid-column: 7 / 12;
+      }
+      .projectTitle {
+        grid-column: 7 / 12;
+      }
+      .projectDescription {
+        grid-column: 7 / 12;
+      }
+      .projectLink {
+        grid-column: 7 / 9;
+        background-color: $white-linen;
+      }
+      .img-wrapper {
+        grid-column: 1 / 6;
+      }
+    }
+    .projectLink {
+      background-color: #fcf9f5;
+      &:hover {
+        background-color: $steel-blue;
+        transition: .2s;
+      }
+    }
+  }
+}

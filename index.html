@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeremia Verhulst - Digital creative</title>
+    <link href="scss/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+</head>
+<body>
+<header>
+    <div id="header-logo">
+        <a href="index.html"><img src="assets/img/logo.svg" alt="JV monogram"></a>
+        <a href="index.html" class="header-name">jeremia verhulst</a>
+    </div>
+    <nav id="header-nav">
+        <ul>
+            <li class="nav-link"><a href="work.html">work</a></li>
+            <li class="nav-link"><a href="#about">about</a></li>
+            <li class="nav-link"><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <main id="main-index">
+        <h1 class="fadeInUp">I’m Jeremia, a digital creative with a passion for code, design and coffee<span>.</span></h1>
+        <p class="fadeInUp">Driven by an interest in the ever changing digital world of the world wide web, I want to help people connect with brands they love as much as I want to help brands create products their customers will fall in love with.</p>
+        <span class="img-wrapper fadeInUp">
+            <img id="home-img" src="assets/img/home-img.png" alt="">
+        </span>
+        <span class="line-accent"></span>
+        <a href="#" class="cta-link">project reel</a>
+    </main>
+</div>
+<div class="container projectReel-container">
+    <section id="projectReel">
+        <p class="projectFilter"></p>
+        <h3 class="projectTitle"></h3>
+        <p class="projectDescription"></p>
+        <a href="#" class="projectLink">closer look</a>
+        <span class="img-wrapper">
+            <img src="" alt="" class="projectImg">
+        </span>
+        <span id="projectReelBtns">
+            <button id="project0" class="projectReelBtn active" onclick="getProjectContent(this)">1</button>
+            <button id="project1" class="projectReelBtn" onclick="getProjectContent(this)">2</button>
+            <button id="project2" class="projectReelBtn" onclick="getProjectContent(this)">3</button>
+            <button id="project3" class="projectReelBtn" onclick="getProjectContent(this)">4</button>
+            <button id="project4" class="projectReelBtn" onclick="getProjectContent(this)">5</button>
+        </span>
+    </section>
+    <span id ="about"></span>
+</div>
+<div class="container about">
+    <h2>What do I do?</h2>
+    <section id="whatDoIDo">
+        <article class="activity1">
+            <img src="assets/img/webdev-icon.svg" alt="web development icon" class="activityImg">
+            <div class="activity-text-wrapper">
+                <h3>Web development</h3>
+                <p>Bold texts and fancy graphics only take you so far. If your website doesn't work properly, you might lose valuable customers. I make sure your website works how it should, with clean code and great performance on any screen.</p>
+            </div>
+        </article>
+        <article class="activity2">
+            <img src="assets/img/webdes-icon.svg" alt="web design icon" class="activityImg">
+            <div class="activity-text-wrapper">
+                <h3>Web design</h3>
+                <p>Whether it's right or not, looks are important. I can help you make your website look professional, trustworthy and unforgettable with design choices that are thought through and have proper meaning.</p>
+            </div>
+        </article>
+        <article class="activity3">
+            <img src="assets/img/branding-icon.svg" alt="branding icon" class="activityImg">
+            <div class="activity-text-wrapper">
+                <h3>Branding</h3>
+                <p>More than a catchy logo or a witty name, branding is about how customers connect with your brand. What do they feel or think about when they see your logo or hear your name? I'll make sure they fall in love with your brand.</p>
+            </div>
+        </article>
+        <article class="activity4">
+            <img src="assets/img/graph-icon.svg" alt="graphic design icon" class="activityImg">
+            <div class="activity-text-wrapper">
+                <h3>Graphic design</h3>
+                <p>How can you reach people? Memorable advertising, fitting graphics, clear messages, etc. are all part of letting your brand come to life. I can help you to give your brand the finishing touch.</p>
+            </div>
+        </article>
+    </section>
+</div>
+<div class="container about">
+    <h2>Who am I?</h2>
+    <section id="whoAmI">
+        <ul id="traits">
+            <li>
+                <img src="assets/img/antwerp-icon.svg" alt="Cathedral of Our Lady in Antwerp icon" class="traitImg">
+                <p>I'm born and raised in Antwerp.</p>
+            </li>
+            <li>
+                <img src="assets/img/idea-icon.svg" alt="creative thinker icon" class="traitImg">
+                <p>I'm a creative thinker.</p>
+            </li>
+            <li>
+                <img src="assets/img/dogs-icon.svg" alt="dog paws icon" class="traitImg">
+                <p>I love dogs (currently have two.)</p>
+            </li>
+            <li>
+                <img src="assets/img/coffee-icon.svg" alt="coffee cup icon" class="traitImg">
+                <p>I'm a coffee lover.</p>
+            </li>
+            <li>
+                <img src="assets/img/soundtrack-icon.svg" alt="soundtrack icon" class="traitImg">
+                <p>I listen to soundtracks.</p>
+            </li>
+            <li>
+                <img src="assets/img/humor-icon.svg" alt="humor icon" class="traitImg">
+                <p>I have a dry sense of humor.</p>
+            </li>
+            <li>
+                <img src="assets/img/reading-icon.svg" alt="book icon" class="traitImg">
+                <p>I like to read fiction.</p>
+            </li>
+            <li>
+                <img src="assets/img/tennis-icon.svg" alt="tennis icon" class="traitImg">
+                <p>I play tennis.</p>
+            </li>
+        </ul>
+    </section>
+</div>
+<div id="contact" class="contact">
+    <section class="mailInfo">
+        <h2 class="subtitle">Contact</h2>
+        <p>Do you want to work with me? Do you have any questions? Shoot!</p>
+        <span class="line-accent"></span>
+        <a href="mailto:jeremia.verhulst@hotmail.com" target="_blank" class="projectLink">send email</a>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/jeremiaverhulst/" target="_blank"><img src="assets/img/linkedin-icon.svg" alt="LinkedIn icon"></a>
+                <a href="https://www.linkedin.com/in/jeremiaverhulst/" target="_blank" class="social-link-name">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/jeremiaverhulst" target="_blank"><img src="assets/img/github-icon.svg" alt="Github icon"></a>
+                <a href="https://github.com/jeremiaverhulst" target="_blank" class="social-link-name">Github</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/jeremia.verhulst" target="_blank"><img src="assets/img/facebook-icon.svg" alt="Facebook icon"></a>
+                <a href="https://www.facebook.com/jeremia.verhulst" target="_blank" class="social-link-name">Facebook</a>
+            </li>
+        </ul>
+    </section>
+</div>
+<footer>
+    <p>© 2020, Jeremia Verhulst - <a href="">It only goes up from here!</a></p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

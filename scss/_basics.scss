@@ -1,0 +1,136 @@
+@import 'mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include basic-text;
+  background-color: #fcf9f5;
+  margin: 0 2.5vw;
+
+  header {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100vw - 5vw);
+    padding: 4vh 0;
+    background-color: #fcf9f5;
+    z-index: 2;
+    top: 0;
+
+    #header-logo {
+      height: 48px;
+      width: 30vmax;
+      display: flex;
+      align-items: center;
+      margin-left: 1vw;
+
+      a {
+        height: 48px;
+      }
+
+      a > img {
+        height: 48px;
+        margin-right: 3vmax;
+      }
+
+      .header-name {
+        @include nav-header;
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+
+    nav#header-nav {
+      ul {
+        list-style: none;
+        width: 30vmax;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          display: inline-block;
+          padding: 0 10px;
+          border-bottom: 1px solid #fcf9f5;
+          transition: .2s;
+
+          a {
+            @include nav-navigation;
+            display: inline-block;
+            text-decoration: none;
+          }
+
+          &:hover {
+            border-bottom: 1px solid $dark-mint;
+            transition: .2s;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    background-color: $white-linen;
+    margin: calc(10vh - 18px) 0 20vh;
+    padding-top: 5vh;
+    width: 95vw;
+    min-height: 87vh;
+    overflow-y: hidden;
+  }
+
+  .projectFilter {
+    color: $dark-mint;
+    font-family: $fontMontserrat;
+    font-size: 1rem;
+    grid-column: 2 / 7;
+    grid-row: 3 / 3;
+    align-self: flex-end;
+    padding-bottom: .5vmax;
+  }
+  .projectTitle {
+    @include header2;
+    grid-column: 2 / 7;
+    grid-row: 4 / 6;
+    align-self: flex-start;
+  }
+  .projectDescription {
+    grid-column: 2 / 7;
+    grid-row: 6 / 9;
+    align-self: flex-start;
+  }
+  .projectLink {
+    @include button;
+    grid-column: 2 / 4;
+    grid-row: 9 / 10;
+    align-self: center;
+  }
+  .img-wrapper {
+    grid-column: 8 / 13;
+    grid-row: 2 / 12;
+    .projectImg {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  footer {
+    margin: 4vmax 0;
+    font-family: $fontMontserrat;
+    p {
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: $dark-mint;
+      font-weight: 500;
+    }
+  }
+}
